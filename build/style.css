@@ -202,10 +202,10 @@ body {
 }
 
 .container-description-title {
-  width: 300px;
+  padding: 4px 16px;
   font-family: 'Baloo Da 2', cursive;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.7rem;
   background-color: var(--primary-color);
 }
 
@@ -279,12 +279,18 @@ body {
 }
 
 .container-content-projects {
+  justify-content: space-around;
+  background: linear-gradient(var(--light-blue), var(--secondary-color));
+}
+
+.container-project-cards {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(var(--light-blue), var(--secondary-color));
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .project-card {
@@ -330,13 +336,49 @@ body {
 }
 
 .container-content-contact {
-  /* background-color: var(--secondary-color); */
-  background: linear-gradient(var(--secondary-color), var(--primary-color));
+  justify-content: center;
+  background: linear-gradient(var(--secondary-color), #fff);
+}
+
+.contact-links {
+  margin: 20px;
+}
+
+.contact-links-text {
+  color: var(--primary-color);
+}
+
+.contact-links-email {
+  margin: 14px;
+}
+
+.contact-links-email > a {
+  padding: 4px 14px 6px 14px;
+  color: var(--light-green);
+  background-color: #fff;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: color 0.5s ease-in;
+}
+
+.contact-links-email > a:hover {
+  color: var(--primary-color);
+}
+
+.contact-links-media > a {
+  margin: 6px;
+  color: var(--light-green);
+  font-size: 1.8rem;
+  transition: color 0.5s ease-in;
+}
+
+.contact-links-media > a:hover {
+  color: var(--primary-color);
 }
 
 @media (min-width: 1200px) {
   .container-content {
-    justify-content: space-around;
+    justify-content: center;
   }
   .project-card {
     width: 260px;
