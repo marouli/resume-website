@@ -6,13 +6,13 @@ let showMenu = false;
 
 const toggleMenu = () => {
   if (!showMenu) {
-    hamburger.classList.add('close');
+    hamburger.classList.add('open');
     navLinks.classList.add('open');
     links.forEach((item) => item.classList.add('open'));
 
     showMenu = true;
   } else {
-    hamburger.classList.remove('close');
+    hamburger.classList.remove('open');
     navLinks.classList.remove('open');
     links.forEach((link) => link.classList.remove('open'));
 
